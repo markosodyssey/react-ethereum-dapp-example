@@ -67,13 +67,11 @@ This new level of quality allows Progressive Web Apps to earn a place on the use
 
 ## Installation
 
-Download the latest verion of Parity [here](https://github.com/paritytech/parity/releases).
+~~Download the latest verion of Parity [here](https://github.com/paritytech/parity/releases).~~
 
 Also ensure that you have the latest verion of Truffle installed globally:
 
-```bash
-npm install -g truffle
-```
+~~npm install -g truffle~~
 
 Finally install all package dependencies:
 
@@ -87,16 +85,21 @@ Run all of the following commands inside the project directory.
 
 ### 1) Start Parity Development Chain
 
+~~parity --chain dev --ws-origins "*"~~
+
 ```bash
-parity --chain dev --ws-origins "*"
+npm run ganache-cli -- -f "YOUR_INFURA_URL"
 ```
 
 Note: we set `--ws-origins` so that we can use websockets to subscribe to blockchain events.
 
 ### 2) Compile and Migrate smart-contracts
 
+~~truffle compile && truffle migrate~~
+
 ```bash
-truffle compile && truffle migrate
+npm run truffle compile
+npm run truffle migrate
 ```
 
 NOTE: after running open parity (at [`http://127.0.0.1:8180/`](http://127.0.0.1:8180/)) in a browser and confirm all of the transactions to complete the migration.

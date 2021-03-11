@@ -1,4 +1,4 @@
-import Web3 from '../node_modules/web3'; // Must specfiy node_modules to avoid importing itself
+import Web3 from 'web3'; // Must specfiy node_modules to avoid importing itself
 
 let web3;
 // Instantiate new web3 global instance

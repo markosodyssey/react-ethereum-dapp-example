@@ -4,7 +4,13 @@ module.exports = {
       host: "localhost",
       port: 8545,
       network_id: "*", // Match any network id
-      gas: 210000
+      skipDryRun: true,
+      gas: 6700000
+    }
+  },
+  compilers: {
+    solc: {
+      version: '0.6.12'
     }
   }
 };
